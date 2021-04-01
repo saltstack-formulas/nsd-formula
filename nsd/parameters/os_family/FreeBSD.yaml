@@ -13,4 +13,6 @@
 ---
 values:
   rootgroup: wheel
+  config: '/usr/local/etc/nsd/nsd.conf'
+  config_include_dir: '/usr/local/etc/nsd/nsd.conf.d'
 ...

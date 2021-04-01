@@ -5,6 +5,6 @@ portage:
   sync_wait_one_day: true
 nsd:
   pkg:
-    name: 'app-shells/bash'
+    name: 'nsd'
   service:
-    name: "{{ 'systemd-journald' if grains.init == 'systemd' else 'mtab' }}"
+    name: 'nsd'

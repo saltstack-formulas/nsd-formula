@@ -15,7 +15,7 @@ nsd:
     name: cronie
   service:
     name: crond
-  config: /etc/template-formula.conf
+  config: /etc/nsd/nsd.conf
 
   tofs:
     # The files_switch key serves as a selector for alternative
@@ -46,7 +46,7 @@ nsd:
     # For testing purposes
     source_files:
       nsd-config-file-file-managed:
-        - 'example.tmpl.jinja'
+        - 'nsd.conf.jinja'
 
   # Just for testing purposes
   winner: pillar

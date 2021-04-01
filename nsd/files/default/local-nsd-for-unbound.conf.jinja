@@ -1,0 +1,18 @@
+########################################################################
+# File managed by Salt at <{{ source }}>.
+# Your changes will be overwritten.
+########################################################################
+
+# This is just a minimal example for using NSD together with a locally
+# running unbound resolver. (See unbound-forula)
+# If you need different configuration, use the TOFS pattern!
+
+# (We're using IPv4 here, because the Kitchen CI configuration had no IPv6 at the time of development.)
+
+server:
+  server-count: 1
+  ip-address: 127.0.0.1
+  port: 53530
+
+remote-control:
+  control-interface: 127.0.0.1

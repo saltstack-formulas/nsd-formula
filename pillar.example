@@ -8,14 +8,17 @@ nsd:
     winner: lookup
     added_in_lookup: lookup_value
 
-  # Using bash package and udev service as an example. This allows us to
-  # test the template formula itself. You should set these parameters to
-  # examples that make sense in the contexto of the formula you're writing.
-  pkg:
-    name: bash
-  service:
-    name: systemd-journald
-  config: /etc/template-formula.conf
+  # pkg:
+  #   name: nsd
+  # service:
+  #   name: nsd
+  # config: /etc/nsd/nsd.conf
+  # config_include_dir: /etc/nsd/nsd.conf.d
+  # config_include_glob: *.conf
+
+  # Configuration is separated into several files which have their own templates
+  config_files:
+    10-server: local-nsd-for-unbound
 
   tofs:
     # The files_switch key serves as a selector for alternative
@@ -48,7 +51,7 @@ nsd:
     # For testing purposes
     source_files:
       nsd-config-file-file-managed:
-        - 'example.tmpl.jinja'
+        - 'nsd.conf.jinja'
 
   # Just for testing purposes
   winner: pillar

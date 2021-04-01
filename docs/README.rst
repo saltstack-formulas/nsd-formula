@@ -18,8 +18,14 @@ nsd-formula
    :scale: 100%
    :target: https://github.com/pre-commit/pre-commit
 
-A SaltStack formula that is empty. It has dummy content to help with a quick
-start on a new formula and it serves as a style guide.
+A SaltStack formula that manages NSD.
+
+It intentionally provides only minimalistic configuration.
+Use the `TOFS pattern<https://template-formula.readthedocs.io/en/latest/TOFS_pattern.html>` to alter the configuration to your needs.
+
+You'll need to write the zone files yourself, obviously.
+This formula will tell NSD to compile them into it's DB and provide a configuration file for you to include.
+
 
 .. contents:: **Table of Contents**
    :depth: 1

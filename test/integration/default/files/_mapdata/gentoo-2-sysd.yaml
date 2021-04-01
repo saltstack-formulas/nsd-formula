@@ -6,7 +6,11 @@ values:
   added_in_lookup: lookup_value
   added_in_pillar: pillar_value
   arch: amd64
-  config: /etc/template-formula.conf
+  config: /etc/nsd/nsd.conf
+  config_files:
+   10-server: local-nsd-for-unbound
+  config_include_dir: "/etc/nsd/nsd.conf.d"
+  config_include_glob: "*.conf"
   lookup:
     added_in_lookup: lookup_value
     master: template-master
@@ -22,10 +26,10 @@ values:
     - Y:G@id
   master: template-master
   pkg:
-    name: app-shells/bash
+    name: nsd
   rootgroup: root
   service:
-    name: systemd-journald
+    name: nsd
   tofs:
     files_switch:
     - any/path/can/be/used/here
@@ -36,5 +40,5 @@ values:
     - os_family
     source_files:
       nsd-config-file-file-managed:
-      - example.tmpl.jinja
+      - nsd.conf.jinja
   winner: pillar

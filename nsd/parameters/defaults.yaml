@@ -7,7 +7,9 @@ values:
   pkg:
     name: nsd
   rootgroup: root
-  config: '/etc/nsd'
+  config: '/etc/nsd/nsd.conf'
+  config_include_dir: '/etc/nsd/nsd.conf.d'
+  config_include_glob: '*.conf'
   service:
     name: nsd
   # Just here for testing

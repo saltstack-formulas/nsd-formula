@@ -12,7 +12,7 @@ control 'nsd.service.running' do
     when 'centos-6', 'amazonlinux-1'
       'crond'
     else
-      'systemd-journald'
+      'nsd'
     end
 
   describe service(service_name) do

@@ -489,7 +489,7 @@ Here is an example based on `template-formula/nsd/config/file.sls`_:
     nsd-config-file-file-managed:
       file.managed:
         - name: {{ nsd.config }}
-        - source: {{ files_switch(['example.tmpl'],
+        - source: {{ files_switch(['nsd.conf'],
                                   lookup='nsd-config-file-file-managed'
                      )
                   }}
