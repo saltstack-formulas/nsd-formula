@@ -10,8 +10,6 @@ values:
   config: '/etc/nsd'
   service:
     name: nsd
-  subcomponent:
-    config: '/etc/nsd-subcomponent-formula.conf'
   # Just here for testing
   added_in_defaults: defaults_value
   winner: defaults

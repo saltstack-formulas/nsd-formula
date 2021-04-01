@@ -26,9 +26,7 @@ control 'nsd.config.file' do
       should include(
         '"tofs": {"files_switch": ["any/path/can/be/used/here", "id", '\
         '"roles", "osfinger", "os", "os_family"], "source_files": '\
-        '{"nsd-config-file-file-managed": ["example.tmpl.jinja"], '\
-        '"nsd-subcomponent-config-file-file-managed": '\
-        '["subcomponent-example.tmpl.jinja"]}'
+        '{"nsd-config-file-file-managed": ["example.tmpl.jinja"]}'
       )
       # rubocop:enable Layout/LineLength
       # rubocop:enable Lint/RedundantCopDisableDirective

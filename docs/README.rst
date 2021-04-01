@@ -129,28 +129,6 @@ dependency on ``nsd.service.clean`` via include list.
 This state will remove the nsd package and has a depency on
 ``nsd.config.clean`` via include list.
 
-``nsd.subcomponent``
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-*Meta-state (This is a state that includes other states)*.
-
-This state installs a subcomponent configuration file before
-configuring and starting the nsd service.
-
-``nsd.subcomponent.config``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This state will configure the nsd subcomponent and has a
-dependency on ``nsd.config`` via include list.
-
-``nsd.subcomponent.config.clean``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This state will remove the configuration of the nsd subcomponent
-and reload the nsd service by a dependency on
-``nsd.service.running`` via include list and ``watch_in``
-requisite.
-
 Testing
 -------
 
