@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+#
+# Set default values.
+---
+values:
+  pkg:
+    name: nsd
+  rootgroup: root
+  config: '/etc/nsd'
+  service:
+    name: nsd
+  subcomponent:
+    config: '/etc/nsd-subcomponent-formula.conf'
+  # Just here for testing
+  added_in_defaults: defaults_value
+  winner: defaults
+...
