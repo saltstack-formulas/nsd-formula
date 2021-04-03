@@ -42,3 +42,9 @@ values:
       nsd-config-file-file-managed:
       - nsd.conf.jinja
   winner: pillar
+  zones:
+    168.192.in-addr.arpa: {}
+    example.test:
+      multi-master-check: false
+  zones_dir: "/etc/nsd/zones"
+

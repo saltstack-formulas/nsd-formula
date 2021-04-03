@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+# vim: ft=sls
+
+{%- set tplroot = 'nsd' %}
+{%- from tplroot ~ "/map.jinja" import mapdata as nsd with context %}
+{%- from tplroot ~ "/libtofs.jinja" import files_switch with context %}
+
+{%- macro config_file(name, template) %}
+{%-   set identifier = 'nsd-config-config_file-file-managed-'+name %}
+"{{ identifier }}":
+  file.managed:
+    - name: "{{ nsd.config_include_dir }}/{{ name }}.conf"
+    - source: {{ files_switch([template+'.conf', template+'.conf.jinja'],
+                              lookup=identifier
+                 )
+              }}
+    - mode: 644
+    - user: root
+    - group: {{ nsd.rootgroup }}
+    - makedirs: True
+    - template: jinja
+    - require:
+      - file: nsd-config-include-file-directory
+    - require_in:
+      - file: nsd-config-file-file-managed
+    - context:
+        nsd: {{ nsd | json }}
+    - check_cmd: nsd-checkconf
+    - watch_in:
+      - service: nsd-service-running-service-running
+{%- endmacro %}
+
+{%- macro zonefile_name(zone_name, zone_config) -%}
+{{ zone_config.get('zonefile', zone_name+'.zone') }}
+{%- endmacro %}

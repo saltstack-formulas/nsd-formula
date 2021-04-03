@@ -10,6 +10,7 @@ values:
   config: '/etc/nsd/nsd.conf'
   config_include_dir: '/etc/nsd/nsd.conf.d'
   config_include_glob: '*.conf'
+  zones_dir: '/etc/nsd/zones'
   service:
     name: nsd
   # Just here for testing

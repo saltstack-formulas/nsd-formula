@@ -5,3 +5,4 @@ include:
   - .include
   - .config_files
   - .file
+  - .zones

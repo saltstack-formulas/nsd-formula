@@ -1,0 +1,11 @@
+{%- from "nsd/macros.jinja" import zonefile_name with context -%}
+########################################################################
+# File managed by Salt at <{{ source }}>.
+# Your changes will be overwritten.
+########################################################################
+
+{%- for name, config in nsd.get('zones').items() %}
+zone:
+  name: "{{ name }}"
+  zonefile: "{{ nsd.zones_dir }}/{{ zonefile_name(name, config) }}"
+{%- endfor %}

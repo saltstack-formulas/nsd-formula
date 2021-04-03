@@ -6,12 +6,12 @@
 {%- set sls_config_file = tplroot ~ '.config.file' %}
 {%- from tplroot ~ "/map.jinja" import mapdata as nsd with context %}
 
+{%- set config_dir = salt.file.dirname(nsd.config) %}
+
 include:
   - {{ sls_config_file }}
 
-nsd-service-running-service-running:
-  service.running:
-    - name: {{ nsd.service.name }}
-    - enable: True
-    - require:
-      - cmd: nsd-service-control-setup-control
+nsd-service-control-setup-control:
+  cmd.run:
+    - name: nsd-control-setup
+    - creates: {{ config_dir }}/nsd_server.pem

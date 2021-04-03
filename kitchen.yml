@@ -321,6 +321,7 @@ suites:
       state_top:
         base:
           '*':
+            - nsd._test_dependencies
             - nsd._mapdata
             - nsd
       pillars:

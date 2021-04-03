@@ -2,4 +2,6 @@
 # vim: ft=sls
 
 include:
+  - .control-setup
   - .running
+  - .control-reload
