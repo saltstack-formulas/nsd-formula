@@ -31,9 +31,9 @@ platforms:
   # - name: centos-7-tiamat-py3
   #   driver:
   #     image: saltimages/salt-tiamat-py3:centos-7
-  - name: amazonlinux-2-tiamat-py3
-    driver:
-      image: saltimages/salt-tiamat-py3:amazonlinux-2
+  # - name: amazonlinux-2-tiamat-py3
+  #   driver:
+  #     image: saltimages/salt-tiamat-py3:amazonlinux-2
   - name: oraclelinux-8-tiamat-py3
     driver:
       image: saltimages/salt-tiamat-py3:oraclelinux-8
@@ -85,9 +85,9 @@ platforms:
     # => SCP did not finish successfully (255):  (Net::SCP::Error)
     transport:
       max_ssh_sessions: 1
-  - name: amazonlinux-2-master-py3
-    driver:
-      image: saltimages/salt-master-py3:amazonlinux-2
+  # - name: amazonlinux-2-master-py3
+  #   driver:
+  #     image: saltimages/salt-master-py3:amazonlinux-2
   - name: oraclelinux-8-master-py3
     driver:
       image: saltimages/salt-master-py3:oraclelinux-8
@@ -130,9 +130,9 @@ platforms:
   - name: fedora-32-3002-5-py3
     driver:
       image: saltimages/salt-3002.5-py3:fedora-32
-  - name: amazonlinux-2-3002-5-py3
-    driver:
-      image: saltimages/salt-3002.5-py3:amazonlinux-2
+  # - name: amazonlinux-2-3002-5-py3
+  #   driver:
+  #     image: saltimages/salt-3002.5-py3:amazonlinux-2
   - name: oraclelinux-8-3002-5-py3
     driver:
       image: saltimages/salt-3002.5-py3:oraclelinux-8
@@ -213,9 +213,9 @@ platforms:
     # => SCP did not finish successfully (255):  (Net::SCP::Error)
     transport:
       max_ssh_sessions: 1
-  - name: amazonlinux-2-3001-6-py3
-    driver:
-      image: saltimages/salt-3001.6-py3:amazonlinux-2
+  # - name: amazonlinux-2-3001-6-py3
+  #   driver:
+  #     image: saltimages/salt-3001.6-py3:amazonlinux-2
   - name: oraclelinux-8-3001-6-py3
     driver:
       image: saltimages/salt-3001.6-py3:oraclelinux-8
@@ -261,9 +261,9 @@ platforms:
     # => SCP did not finish successfully (255):  (Net::SCP::Error)
     transport:
       max_ssh_sessions: 1
-  - name: amazonlinux-2-3000-8-py3
-    driver:
-      image: saltimages/salt-3000.8-py3:amazonlinux-2
+  # - name: amazonlinux-2-3000-8-py3
+  #   driver:
+  #     image: saltimages/salt-3000.8-py3:amazonlinux-2
   - name: oraclelinux-8-3000-8-py3
     driver:
       image: saltimages/salt-3000.8-py3:oraclelinux-8
