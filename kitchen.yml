@@ -63,9 +63,9 @@ platforms:
   # - name: centos-7-master-py3
   #   driver:
   #     image: saltimages/salt-master-py3:centos-7
-  - name: fedora-33-master-py3
-    driver:
-      image: saltimages/salt-master-py3:fedora-33
+  # - name: fedora-33-master-py3
+  #   driver:
+  #     image: saltimages/salt-master-py3:fedora-33
   - name: fedora-32-master-py3
     driver:
       image: saltimages/salt-master-py3:fedora-32
@@ -124,9 +124,9 @@ platforms:
   # - name: centos-7-3002-5-py3
   #   driver:
   #     image: saltimages/salt-3002.5-py3:centos-7
-  - name: fedora-33-3002-5-py3
-    driver:
-      image: saltimages/salt-3002.5-py3:fedora-33
+  # - name: fedora-33-3002-5-py3
+  #   driver:
+  #     image: saltimages/salt-3002.5-py3:fedora-33
   - name: fedora-32-3002-5-py3
     driver:
       image: saltimages/salt-3002.5-py3:fedora-32
@@ -191,9 +191,9 @@ platforms:
   # - name: centos-7-3001-6-py3
   #   driver:
   #     image: saltimages/salt-3001.6-py3:centos-7
-  - name: fedora-33-3001-6-py3
-    driver:
-      image: saltimages/salt-3001.6-py3:fedora-33
+  # - name: fedora-33-3001-6-py3
+  #   driver:
+  #     image: saltimages/salt-3001.6-py3:fedora-33
   - name: fedora-32-3001-6-py3
     driver:
       image: saltimages/salt-3001.6-py3:fedora-32
