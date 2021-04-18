@@ -139,10 +139,10 @@ platforms:
   # - name: oraclelinux-7-3002-5-py3
   #   driver:
   #     image: saltimages/salt-3002.5-py3:oraclelinux-7
-  - name: arch-base-latest-3002-5-py3
-    driver:
-      image: saltimages/salt-3002.5-py3:arch-base-latest
-      run_command: /usr/lib/systemd/systemd
+  # - name: arch-base-latest-3002-5-py3
+  #   driver:
+  #     image: saltimages/salt-3002.5-py3:arch-base-latest
+  #     run_command: /usr/lib/systemd/systemd
   - name: gentoo-stage3-latest-3002-5-py3
     driver:
       image: saltimages/salt-3002.5-py3:gentoo-stage3-latest
@@ -222,10 +222,10 @@ platforms:
   # - name: oraclelinux-7-3001-6-py3
   #   driver:
   #     image: saltimages/salt-3001.6-py3:oraclelinux-7
-  - name: arch-base-latest-3001-6-py3
-    driver:
-      image: saltimages/salt-3001.6-py3:arch-base-latest
-      run_command: /usr/lib/systemd/systemd
+  # - name: arch-base-latest-3001-6-py3
+  #   driver:
+  #     image: saltimages/salt-3001.6-py3:arch-base-latest
+  #     run_command: /usr/lib/systemd/systemd
   - name: gentoo-stage3-latest-3001-6-py3
     driver:
       image: saltimages/salt-3001.6-py3:gentoo-stage3-latest
@@ -283,10 +283,10 @@ platforms:
   - name: ubuntu-1604-3000-8-py2
     driver:
       image: saltimages/salt-3000.8-py2:ubuntu-16.04
-  - name: arch-base-latest-3000-8-py2
-    driver:
-      image: saltimages/salt-3000.8-py2:arch-base-latest
-      run_command: /usr/lib/systemd/systemd
+  # - name: arch-base-latest-3000-8-py2
+  #   driver:
+  #     image: saltimages/salt-3000.8-py2:arch-base-latest
+  #     run_command: /usr/lib/systemd/systemd
 
 provisioner:
   name: salt_solo
