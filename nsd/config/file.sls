@@ -4,6 +4,7 @@
 {#- Get the `tplroot` from `tpldir` #}
 {%- set tplroot = tpldir.split('/')[0] %}
 {%- set sls_package_install = tplroot ~ '.package.install' %}
+{%- from tplroot ~ "/macros.jinja" import config_file with context %}
 {%- from tplroot ~ "/map.jinja" import mapdata as nsd with context %}
 {%- from tplroot ~ "/libtofs.jinja" import files_switch with context %}
 
@@ -28,3 +29,12 @@ nsd-config-file-file-managed:
     - context:
         nsd: {{ nsd | json }}
     - check_cmd: nsd-checkconf
+
+{%- set config_data = nsd.get('config_data', {}) %}
+
+{%- if config_data | length > 0 %}
+
+{{    config_file('10-salt', 'pillar-configuration') }}
+
+{%- endif %}
+

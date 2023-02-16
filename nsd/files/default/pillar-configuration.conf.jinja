@@ -1,0 +1,12 @@
+{%- for category, config in nsd.get('config_data').items() %}
+{{ category }}:
+{%- for option, value in config.items() %}
+  {%- if value is string or value is number %}
+  {{ option }}: {{ value }}
+  {%- elif value is iterable %}
+  {%- for item in value %}
+  {{ option }}: {{ item }}
+  {%- endfor %}
+  {%- endif %}
+{%- endfor %}
+{%- endfor %}

@@ -7,8 +7,15 @@ values:
   added_in_pillar: pillar_value
   arch: amd64
   config: /etc/nsd/nsd.conf
-  config_files:
-   10-server: local-nsd-for-unbound
+  config_data:
+    remote-control:
+      control-enable: 'yes'
+      control-interface: /run/nsd.sock
+    server:
+      hide-version: 'yes'
+      ip-address: 127.0.0.1
+      port: 53530
+      verbosity: 2
   config_include_dir: "/etc/nsd/nsd.conf.d"
   config_include_glob: "*.conf"
   lookup:
