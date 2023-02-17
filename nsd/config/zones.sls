@@ -28,10 +28,14 @@ nsd-config-zones-file-directory:
 "{{ identifier }}":
   file.managed:
     - name: "{{ nsd.zones_dir }}/{{ zonefile_name(name, config) }}"
+    {%- if 'zone_source' in config %}
+    - source: {{ config['zone_source'] }}
+    {%- else %}
     - source: {{ files_switch([template, template+'.jinja'],
                               lookup=identifier
                  )
               }}
+    {%- endif %}
     - mode: 644
     - user: root
     - group: {{ nsd.rootgroup }}

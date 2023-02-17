@@ -31,6 +31,11 @@ nsd:
     "168.192.in-addr.arpa": {}
     # NSD's include-pattern directive may be a better way to share configuration
     # across zones than using YAML anchors.
+    #
+    # You can load the zone file from a custom source and specify additional configuration options:
+    # example.com:
+    #   zone_source: salt://zones/example.com.zone
+    #   request-xfr: 192.168.0.1
 
   # If this section is present in your Pillar data,
   # nsd.conf.d/10-salt.conf will be created and managed
