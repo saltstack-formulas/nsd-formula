@@ -283,10 +283,10 @@ platforms:
   - name: ubuntu-1604-3000-8-py2
     driver:
       image: saltimages/salt-3000.8-py2:ubuntu-16.04
-  # - name: arch-base-latest-3000-8-py2
-  #   driver:
-  #     image: saltimages/salt-3000.8-py2:arch-base-latest
-  #     run_command: /usr/lib/systemd/systemd
+# - name: arch-base-latest-3000-8-py2
+#   driver:
+#     image: saltimages/salt-3000.8-py2:arch-base-latest
+#     run_command: /usr/lib/systemd/systemd
 
 provisioner:
   name: salt_solo
@@ -336,33 +336,33 @@ suites:
     verifier:
       inspec_tests:
         - path: test/integration/default
-  # - name: gentoo
-  #   includes:
-  #     - gentoo-stage3-latest-master-py3
-  #     - gentoo-stage3-systemd-master-py3
-  #     - gentoo-stage3-latest-3002-5-py3
-  #     - gentoo-stage3-systemd-3002-5-py3
-  #     - gentoo-stage3-latest-3001-6-py3
-  #     - gentoo-stage3-systemd-3001-6-py3
-  #     - gentoo-stage3-latest-3000-8-py3
-  #     - gentoo-stage3-systemd-3000-8-py3
-  #   provisioner:
-  #     state_top:
-  #       base:
-  #         '*':
-  #           - nsd._mapdata
-  #           - nsd
-  #     pillars:
-  #       top.sls:
-  #         base:
-  #           '*':
-  #             - nsd
-  #             - gentoo
-  #             - define_roles
-  #     pillars_from_files:
-  #       nsd.sls: pillar.example
-  #       gentoo.sls: test/salt/pillar/gentoo.sls
-  #       define_roles.sls: test/salt/pillar/define_roles.sls
-  #   verifier:
-  #     inspec_tests:
-  #       - path: test/integration/default
+# - name: gentoo
+#   includes:
+#     - gentoo-stage3-latest-master-py3
+#     - gentoo-stage3-systemd-master-py3
+#     - gentoo-stage3-latest-3002-5-py3
+#     - gentoo-stage3-systemd-3002-5-py3
+#     - gentoo-stage3-latest-3001-6-py3
+#     - gentoo-stage3-systemd-3001-6-py3
+#     - gentoo-stage3-latest-3000-8-py3
+#     - gentoo-stage3-systemd-3000-8-py3
+#   provisioner:
+#     state_top:
+#       base:
+#         '*':
+#           - nsd._mapdata
+#           - nsd
+#     pillars:
+#       top.sls:
+#         base:
+#           '*':
+#             - nsd
+#             - gentoo
+#             - define_roles
+#     pillars_from_files:
+#       nsd.sls: pillar.example
+#       gentoo.sls: test/salt/pillar/gentoo.sls
+#       define_roles.sls: test/salt/pillar/define_roles.sls
+#   verifier:
+#     inspec_tests:
+#       - path: test/integration/default

@@ -25,8 +25,7 @@ nsd:
   # nsd.conf.d/90-generated-zones will be created and managed.
   zones:
     example.test:
-      # Just for testing purpuses
-      multi-master-check: no
+      multi-master-check: 'no'
     "168.192.in-addr.arpa": {}
     # NSD's include-pattern directive may be a better way to share configuration
     # across zones than using YAML anchors.
