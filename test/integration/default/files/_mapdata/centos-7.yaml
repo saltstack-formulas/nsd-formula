@@ -47,4 +47,3 @@ values:
     example.test:
       multi-master-check: false
   zones_dir: "/etc/nsd/zones"
-
