@@ -1,4 +1,5 @@
 {%- from "nsd/macros.jinja" import zonefile_name with context -%}
+{%- set extraopts = ['allow-notify', 'request-xfr', 'outgoing-interface'] -%}
 ########################################################################
 # File managed by Salt at <{{ source }}>.
 # Your changes will be overwritten.
@@ -8,4 +9,9 @@
 zone:
   name: "{{ name }}"
   zonefile: "{{ nsd.zones_dir }}/{{ zonefile_name(name, config) }}"
+  {%- for option in extraopts %}
+  {%- if option in config %}
+  {{ option }}: {{ config[option] }}
+  {%- endif %}
+  {%- endfor %}
 {%- endfor %}
